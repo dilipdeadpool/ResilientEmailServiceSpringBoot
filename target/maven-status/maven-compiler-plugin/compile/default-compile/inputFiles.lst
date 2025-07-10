@@ -1,0 +1,9 @@
+C:\Users\hemant\Downloads\ResilientEmailServiceSpringBoot\src\main\java\com\example\email\ResilientEmailServiceApplication.java
+C:\Users\hemant\Downloads\ResilientEmailServiceSpringBoot\src\main\java\com\example\email\service\EmailService.java
+C:\Users\hemant\Downloads\ResilientEmailServiceSpringBoot\src\main\java\com\example\email\model\EmailRequest.java
+C:\Users\hemant\Downloads\ResilientEmailServiceSpringBoot\src\main\java\com\example\email\service\MockProviderA.java
+C:\Users\hemant\Downloads\ResilientEmailServiceSpringBoot\src\main\java\com\example\email\controller\EmailController.java
+C:\Users\hemant\Downloads\ResilientEmailServiceSpringBoot\src\main\java\com\example\email\service\EmailProvider.java
+C:\Users\hemant\Downloads\ResilientEmailServiceSpringBoot\src\main\java\com\example\email\service\EmailStatusTracker.java
+C:\Users\hemant\Downloads\ResilientEmailServiceSpringBoot\src\main\java\com\example\email\service\RateLimiter.java
+C:\Users\hemant\Downloads\ResilientEmailServiceSpringBoot\src\main\java\com\example\email\service\MockProviderB.java

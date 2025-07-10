@@ -1,0 +1,9 @@
+com\example\email\service\RateLimiter.class
+com\example\email\ResilientEmailServiceApplication.class
+com\example\email\model\EmailRequest.class
+com\example\email\service\EmailStatusTracker.class
+com\example\email\service\MockProviderB.class
+com\example\email\controller\EmailController.class
+com\example\email\service\MockProviderA.class
+com\example\email\service\EmailProvider.class
+com\example\email\service\EmailService.class
