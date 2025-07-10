@@ -1,9 +1,7 @@
 services:
   - type: web
     name: resilient-email-service
-    env: java
-    plan: free
-    buildCommand: "./mvnw clean install"
-    startCommand: "java -jar target/ResilientEmailServiceSpringBoot-1.0.0.jar"
+    runtime: docker
     repo: https://github.com/dilipdeadpool/ResilientEmailServiceSpringBoot
     branch: main
+    plan: free
