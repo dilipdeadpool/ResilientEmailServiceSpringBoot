@@ -16,17 +16,31 @@ public class EmailService {
     }
 
     public boolean sendEmail(EmailRequest request) {
-        if (tracker.isAlreadySent(request.getIdempotencyKey())) return false;
-        if (!limiter.allow()) return false;
-
-        for (int i = 0; i < providers.size(); i++) {
-            if (tryWithRetry(providers.get(i), request)) {
-                tracker.markAsSent(request.getIdempotencyKey());
-                return true;
-            }
-        }
+    if (request == null) {
+        System.err.println("Request is null");
         return false;
     }
+
+    if (request.getIdempotencyKey() == null || 
+        request.getTo() == null || 
+        request.getSubject() == null || 
+        request.getBody() == null) {
+        System.err.println("Missing fields in request: " + request);
+        return false;
+    }
+
+    if (tracker.isAlreadySent(request.getIdempotencyKey())) return false;
+    if (!limiter.allow()) return false;
+
+    for (int i = 0; i < providers.size(); i++) {
+        if (tryWithRetry(providers.get(i), request)) {
+            tracker.markAsSent(request.getIdempotencyKey());
+            return true;
+        }
+    }
+    return false;
+}
+
 
     private boolean tryWithRetry(EmailProvider provider, EmailRequest request) {
         int attempts = 0;
