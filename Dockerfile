@@ -14,5 +14,5 @@ COPY . .
 # Build the project
 RUN mvn clean package -DskipTests
 
-# Run the jar
-CMD ["java", "-jar", "target/ResilientEmailServiceSpringBoot-1.0.0.jar"]
+# Run the jar with the correct filename
+CMD ["java", "-jar", "target/ResilientEmailService-1.0.jar"]
